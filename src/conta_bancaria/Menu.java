@@ -1,10 +1,27 @@
 package conta_bancaria;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		//Criar(istanciar) Objeto da Classe Conta
+		Conta c1 = new Conta(1, 123, 1, "Aylla", 500000);
+		
+		c1.visualizar();
+		//Sacar
+		c1.sacar(100);
+		c1.visualizar();
+		//Depositar
+		c1.depositar(1000);
+		c1.visualizar();
+		
+		//Alterar a propriedade títular
+		c1.setTitular("Aylla Scaglia");
+		c1.visualizar();
+		
 
 		System.out.println(Cores.TEXT_RED_BRIGHT + Cores.ANSI_BLACK_BACKGROUND + "|====================================|");
 		System.out.println("|       BANCO DO BRASIL COM Z        |");
