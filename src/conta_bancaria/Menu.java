@@ -1,6 +1,7 @@
 package conta_bancaria;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -21,6 +22,16 @@ public class Menu {
 		//Alterar a propriedade títular
 		c1.setTitular("Aylla Scaglia");
 		c1.visualizar();
+		
+		//Instaciando um objeto da classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 456, 1, "Renata Negrini", 600000, 60000);
+		cc1.visualizar();
+		
+		cc1.sacar(659000);
+		cc1.visualizar();
+		
+		cc1.depositar(50000);
+		cc1.visualizar();
 		
 
 		System.out.println(Cores.TEXT_RED_BRIGHT + Cores.ANSI_BLACK_BACKGROUND + "|====================================|");
